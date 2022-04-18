@@ -1,0 +1,85 @@
+---
+File[/home/juansepo13/.puppet/etc]:
+  :checked: 2022-04-18 15:32:18.791527000 -05:00
+File[/home/juansepo13/.puppet/etc/code]:
+  :checked: 2022-04-18 15:32:18.791814200 -05:00
+  :synced: 2022-04-18 15:32:18.792252400 -05:00
+File[/home/juansepo13/.puppet/cache]:
+  :checked: 2022-04-18 15:32:18.792590500 -05:00
+  :synced: 2022-04-18 15:32:18.792970200 -05:00
+File[/home/juansepo13/.puppet/var/log]:
+  :checked: 2022-04-18 15:32:18.793294200 -05:00
+  :synced: 2022-04-18 15:32:18.793728100 -05:00
+File[/home/juansepo13/.puppet/cache/state]:
+  :checked: 2022-04-18 15:32:18.794010500 -05:00
+  :synced: 2022-04-18 15:32:18.794404900 -05:00
+File[/home/juansepo13/.puppet/var/run]:
+  :checked: 2022-04-18 15:32:18.794672900 -05:00
+  :synced: 2022-04-18 15:32:18.795059700 -05:00
+File[/home/juansepo13/.puppet/cache/lib]:
+  :checked: 2022-04-18 15:32:18.795306900 -05:00
+  :synced: 2022-04-18 15:32:18.795628900 -05:00
+File[/home/juansepo13/.puppet/cache/preview]:
+  :checked: 2022-04-18 15:32:18.795849000 -05:00
+  :synced: 2022-04-18 15:32:18.796245000 -05:00
+File[/home/juansepo13/.puppet/etc/ssl]:
+  :checked: 2022-04-18 15:32:18.796476100 -05:00
+  :synced: 2022-04-18 15:32:18.796864500 -05:00
+File[/home/juansepo13/.puppet/etc/ssl/certs]:
+  :checked: 2022-04-18 15:32:18.797144300 -05:00
+  :synced: 2022-04-18 15:32:18.797552400 -05:00
+File[/home/juansepo13/.puppet/etc/ssl/public_keys]:
+  :checked: 2022-04-18 15:32:18.797774700 -05:00
+  :synced: 2022-04-18 15:32:18.798166500 -05:00
+File[/home/juansepo13/.puppet/etc/ssl/certificate_requests]:
+  :checked: 2022-04-18 15:32:18.798425000 -05:00
+  :synced: 2022-04-18 15:32:18.798823900 -05:00
+File[/home/juansepo13/.puppet/etc/ssl/private_keys]:
+  :checked: 2022-04-18 15:32:18.799125000 -05:00
+  :synced: 2022-04-18 15:32:18.799735900 -05:00
+File[/home/juansepo13/.puppet/etc/ssl/private]:
+  :checked: 2022-04-18 15:32:18.800625200 -05:00
+  :synced: 2022-04-18 15:32:18.801839000 -05:00
+File[/home/juansepo13/.puppet/cache/client_yaml]:
+  :checked: 2022-04-18 15:32:18.802232500 -05:00
+  :synced: 2022-04-18 15:32:18.802769800 -05:00
+File[/home/juansepo13/.puppet/cache/client_data]:
+  :checked: 2022-04-18 15:32:18.803295000 -05:00
+  :synced: 2022-04-18 15:32:18.804415400 -05:00
+File[/home/juansepo13/.puppet/cache/clientbucket]:
+  :checked: 2022-04-18 15:32:18.804950900 -05:00
+  :synced: 2022-04-18 15:32:18.805438000 -05:00
+File[/home/juansepo13/.puppet/cache/state/graphs]:
+  :checked: 2022-04-18 15:32:18.805733700 -05:00
+  :synced: 2022-04-18 15:32:18.806129100 -05:00
+File[/home/juansepo13/.puppet/cache/facts.d]:
+  :checked: 2022-04-18 15:32:18.806368700 -05:00
+  :synced: 2022-04-18 15:32:18.806716200 -05:00
+File[/home/juansepo13/.puppet/cache/locales]:
+  :checked: 2022-04-18 15:32:18.806958600 -05:00
+  :synced: 2022-04-18 15:32:18.807283800 -05:00
+:configuration: {}
+Stage[main]:
+  :checked: 2022-04-18 15:54:04.472781800 -05:00
+Class[Settings]:
+  :checked: 2022-04-18 15:54:04.472974900 -05:00
+Class[Main]:
+  :checked: 2022-04-18 15:54:04.473046600 -05:00
+File[/tmp/school]:
+  :checked: 2022-04-18 15:53:45.788497200 -05:00
+Schedule[puppet]:
+  :checked: 2022-04-18 15:54:09.431571600 -05:00
+Schedule[hourly]:
+  :checked: 2022-04-18 15:54:09.431797800 -05:00
+Schedule[daily]:
+  :checked: 2022-04-18 15:54:09.431911800 -05:00
+Schedule[weekly]:
+  :checked: 2022-04-18 15:54:09.432014800 -05:00
+Schedule[monthly]:
+  :checked: 2022-04-18 15:54:09.432208400 -05:00
+Schedule[never]:
+  :checked: 2022-04-18 15:54:09.432296300 -05:00
+Filebucket[puppet]:
+  :checked: 2022-04-18 15:54:09.432422900 -05:00
+Package[puppet_lint]:
+  :checked: 2022-04-18 15:54:04.825297500 -05:00

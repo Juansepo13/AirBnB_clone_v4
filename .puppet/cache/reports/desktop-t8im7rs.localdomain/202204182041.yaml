@@ -1,0 +1,328 @@
+--- !ruby/object:Puppet::Transaction::Report
+host: desktop-t8im7rs.localdomain
+time: '2022-04-18T15:41:08.801518300-05:00'
+configuration_version: 1650314468
+transaction_uuid: 7a8575b3-9e62-4389-b732-655b1c3267b7
+report_format: 10
+puppet_version: 5.5.10
+status: failed
+transaction_completed: true
+noop: false
+noop_pending: false
+environment: production
+logs:
+- level: warning
+  message: Cannot manage ownership unless running as root
+  source: Puppet
+  tags:
+  - warning
+  time: '2022-04-18T15:41:08.816846100-05:00'
+  file: 
+  line: 
+- level: err
+  message: 'Failed to set group to ''33'': Operation not permitted @ apply2files -
+    /tmp/school'
+  source: Puppet
+  tags:
+  - err
+  time: '2022-04-18T15:41:08.817517500-05:00'
+  file: 
+  line: 
+- level: err
+  message: 'change from ''juansepo13'' to ''www-data'' failed: Failed to set group
+    to ''33'': Operation not permitted @ apply2files - /tmp/school'
+  source: "/Stage[main]/Main/File[/tmp/school]/group"
+  tags:
+  - err
+  - file
+  - class
+  time: '2022-04-18T15:41:08.818827900-05:00'
+  file: "/home/juansepo13/holberton-system_engineering-devops/0x0A-configuration_management/0-create_a_file.pp"
+  line: 3
+- level: notice
+  message: Applied catalog in 0.02 seconds
+  source: Puppet
+  tags:
+  - notice
+  time: '2022-04-18T15:41:08.828906800-05:00'
+  file: 
+  line: 
+metrics:
+  resources:
+    name: resources
+    label: Resources
+    values:
+    - - total
+      - Total
+      - 8
+    - - skipped
+      - Skipped
+      - 0
+    - - failed
+      - Failed
+      - 1
+    - - failed_to_restart
+      - Failed to restart
+      - 0
+    - - restarted
+      - Restarted
+      - 0
+    - - changed
+      - Changed
+      - 0
+    - - out_of_sync
+      - Out of sync
+      - 1
+    - - scheduled
+      - Scheduled
+      - 0
+    - - corrective_change
+      - Corrective change
+      - 0
+  time:
+    name: time
+    label: Time
+    values:
+    - - file
+      - File
+      - 0.0035751
+    - - schedule
+      - Schedule
+      - 0.00023659999999999998
+    - - filebucket
+      - Filebucket
+      - 3.54e-05
+    - - config_retrieval
+      - Config retrieval
+      - 0.0514859
+    - - transaction_evaluation
+      - Transaction evaluation
+      - 0.007973499999934575
+    - - catalog_application
+      - Catalog application
+      - 0.019939599999815982
+    - - total
+      - Total
+      - 0.0202658
+  changes:
+    name: changes
+    label: Changes
+    values:
+    - - total
+      - Total
+      - 0
+  events:
+    name: events
+    label: Events
+    values:
+    - - total
+      - Total
+      - 1
+    - - failure
+      - Failure
+      - 1
+    - - success
+      - Success
+      - 0
+resource_statuses:
+  File[/tmp/school]:
+    title: "/tmp/school"
+    file: "/home/juansepo13/holberton-system_engineering-devops/0x0A-configuration_management/0-create_a_file.pp"
+    line: 3
+    resource: File[/tmp/school]
+    resource_type: File
+    provider_used: posix
+    containment_path:
+    - Stage[main]
+    - Main
+    - File[/tmp/school]
+    evaluation_time: 0.0035751
+    tags:
+    - file
+    - class
+    time: '2022-04-18T15:41:08.815843600-05:00'
+    failed: true
+    failed_to_restart: false
+    changed: false
+    out_of_sync: true
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 1
+    events:
+    - audited: false
+      property: group
+      previous_value: 1000
+      desired_value: 33
+      historical_value: 
+      message: 'change from ''juansepo13'' to ''www-data'' failed: Failed to set group
+        to ''33'': Operation not permitted @ apply2files - /tmp/school'
+      name: group_changed
+      status: failure
+      time: '2022-04-18T15:41:08.817720900-05:00'
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Schedule[puppet]:
+    title: puppet
+    file: 
+    line: 
+    resource: Schedule[puppet]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[puppet]
+    evaluation_time: 6.93e-05
+    tags:
+    - schedule
+    - puppet
+    time: '2022-04-18T15:41:08.819649400-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[hourly]:
+    title: hourly
+    file: 
+    line: 
+    resource: Schedule[hourly]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[hourly]
+    evaluation_time: 2.99e-05
+    tags:
+    - schedule
+    - hourly
+    time: '2022-04-18T15:41:08.819759800-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[daily]:
+    title: daily
+    file: 
+    line: 
+    resource: Schedule[daily]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[daily]
+    evaluation_time: 3.98e-05
+    tags:
+    - schedule
+    - daily
+    time: '2022-04-18T15:41:08.819832600-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[weekly]:
+    title: weekly
+    file: 
+    line: 
+    resource: Schedule[weekly]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[weekly]
+    evaluation_time: 2.78e-05
+    tags:
+    - schedule
+    - weekly
+    time: '2022-04-18T15:41:08.819909600-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[monthly]:
+    title: monthly
+    file: 
+    line: 
+    resource: Schedule[monthly]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[monthly]
+    evaluation_time: 2.78e-05
+    tags:
+    - schedule
+    - monthly
+    time: '2022-04-18T15:41:08.819976000-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[never]:
+    title: never
+    file: 
+    line: 
+    resource: Schedule[never]
+    resource_type: Schedule
+    provider_used: 
+    containment_path:
+    - Schedule[never]
+    evaluation_time: 4.2e-05
+    tags:
+    - schedule
+    - never
+    time: '2022-04-18T15:41:08.820040200-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Filebucket[puppet]:
+    title: puppet
+    file: 
+    line: 
+    resource: Filebucket[puppet]
+    resource_type: Filebucket
+    provider_used: 
+    containment_path:
+    - Filebucket[puppet]
+    evaluation_time: 3.54e-05
+    tags:
+    - filebucket
+    - puppet
+    time: '2022-04-18T15:41:08.820128600-05:00'
+    failed: false
+    failed_to_restart: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+corrective_change: false
+catalog_uuid: 80d290ce-9e71-4e06-aea4-b8c69d3bbf9f
+cached_catalog_status: not_used
