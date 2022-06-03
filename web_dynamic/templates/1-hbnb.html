@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>AirBnB clone</title>
-		<link rel="stylesheet" type="text/css" href="./styles/4-common.css?{{cache_id}}">
-		<link rel="stylesheet" type="text/css" href="./styles/3-header.css?{{cache_id}}">
-		<link rel="stylesheet" type="text/css" href="./styles/3-footer.css?{{cache_id}}">
-		<link rel="stylesheet" type="text/css" href="./styles/6-filters.css?{{cache_id}}">
-		<link rel="stylesheet" type="text/css" href="./styles/8-places.css?{{cache_id}}">
+		<!-- Css -->
+		<link rel="stylesheet" type="text/css" href="./styles/4-common.css?{{ cache_id }}">
+		<link rel="stylesheet" type="text/css" href="./styles/3-header.css?{{ cache_id }}">
+		<link rel="stylesheet" type="text/css" href="./styles/3-footer.css?{{ cache_id }}">
+		<link rel="stylesheet" type="text/css" href="./styles/6-filters.css?{{ cache_id }}">
+		<link rel="stylesheet" type="text/css" href="./styles/8-places.css?{{ cache_id }}">
 		<link rel="icon" type="image/icon" href="./images/icon.png?{{cache_id}}">
+		<!-- jQuery -->
+		<script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script defer src="./scripts/1-hbnb.js?{{ cache_id }}"></script>
 	</head>
 	<body class="body">
 		<header class ="header">
@@ -20,7 +24,7 @@
 				<div class="filters_main">
 					<div class="locations filters_item">
 						<h3>States</h3>
-						<h4>Faker content</h4>
+						<h4>&nbsp;</h4>
 						<!-- List of elements contained in the filter -->
 						<ul class="popover">
 							{% for state in data.states | sort(attribute="name") %}
@@ -38,11 +42,19 @@
 
 					<div class="amenities filters_item">
 						<h3>Amenities</h3>
-						<h4>Faker content</h4>
+						<h4 id="amenities_checked-filters">...</h4>
 						<!-- List of elements contained in the filter -->
 						<ul class="popover">
 							{% for amenity in data.amenities | sort(attribute="name") %}
-							<li>{{ amenity.name }}</li>
+							<li>
+								<input
+									type="checkbox"
+									class="checkbox"
+									data-id="{{ amenity.id }}"
+									data-name="{{ amenity.name }}"
+								>
+								{{ amenity.name }}
+							</li>
 							{% endfor %}
 						</ul>
 					</div>
